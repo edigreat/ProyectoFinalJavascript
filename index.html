@@ -8,12 +8,19 @@
   <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Josefin+Sans:600' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/animate.css" />
+
 	<link rel="stylesheet" href="css/principal.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 </head>
 <body>
+   <div class="mensajes">
+    <span class="label label-success" id="mensajeRegistro">Registro Exitoso</span>
+
+  </div>
 <div class="container">
+
 <div class="row nav-wrapper">
   <header>
     <div class="nav-wrapper">
@@ -45,9 +52,9 @@
   <img src="img/background.jpg" alt="inicio" class="img-responsive">
   <div class="caption">
     <div class="caption-wrapper">
-      <div class="caption-info">              
+      <div  id="caption" class="caption-info">              
         <h1>Cerveza Artesanal Mexicana</h1>
-        <p >Difundiendo la cerveza que se fabrica en Mexico  </p>
+        <p>Difundiendo la cerveza que se fabrica en Mexico </p>
       </div>
     </div>
   </div>
@@ -56,7 +63,7 @@
 
 <!-- Inicia Seccion Nosotros -->
 <div class="row espacio " id="nosotros">
-  <div class="col-xs-12 col-sm-12 col-md-5 text-center">
+  <div class="col-xs-12 col-sm-12 col-md-5 text-center videoContainer">
     <video  controls="controls" class="img-responsive"
        poster="img/video-icon-png.png" >
       <source src="./video/Cerveza.mp4" type="video/mp4"/>
@@ -79,7 +86,12 @@
  
      <div class="col-md-12">
         <p >Somos un grupo de personas que trata de difundir la cerveza artesanal hecha en Mexico, y toda la ideologia que ello conlleva. Existen varias microcervecerias a lo largo del pais, cuyos productos son de alta calidad, los cuales han sido reconocidos a nivel mundial con varios premios en los primeros lugares. Te invitamos a que conozcas la cerveza hecha en Mexico mediante sus fabricantes, ya que no existen muchos espacios donde se puedan adquirir, aunque esto con el tiempo va a ir cambiando. </p>
-     </div>   
+     </div>
+     <div>
+          <ul id="example-breweries">
+            
+          </ul>
+        </div>   
     </div>
      
 </div>
@@ -115,150 +127,162 @@
 <!--finaliza seccion historia -->
 
 <!-- Inicia seccion galeria-->
-<div class="row " id="cervecerias" >
+<div class="row clearfix " id="cervecerias" >
   <div class="galeria-wrapper text-center">
     <div class="col-md-12 page-header ">
       <h1>Cervecerias Artesanales Mexicanas</h1>
     </div>
-    <div class="col-md-4">
-      <a href="http://www.pepeytono.com.mx/casos_de_exito/cerveza_minerva_la_pequena_mas_grande">
-      <figure>
-
-        <img src="img/galeria/minerva.jpeg"  alt="Minerva Cerveza">
+    <div class=" text-center col-md-4">
+    <figure >
+        <img src="img/galeria/minerva.jpeg" alt="Minerva Cerveza"/>
         <figcaption>
-          <h2>Minerva</h2>
+            <h2>Minerva</h2>
+            <p>Cerveceria Minerva<br>
+            <a href="http://www.pepeytono.com.mx/casos_de_exito/cerveza_minerva_la_pequena_mas_grande">Ver más</a></p>        
         </figcaption>
-      </figure>
-      </a>
+    </figure>
     </div>
     <div class="col-md-4 ">
-      <a href="http://cervezatempus.com/">
       <figure>
         <img src="img/galeria/tempus.jpg"  alt="Tempus Cerveza">
         <figcaption>
           <h2>Tempus</h2>
+          <p>Cerveceria Tempus <br />
+          <a href="http://cervezatempus.com/">Ver más</a>
+          </p>
         </figcaption>
       </figure>
-      </a>
     </div>
     <div class="col-md-4">
-      <a href="http://aguamala.com.mx/">
       <figure>
         <img src="img/galeria/Agua-Mala.png"  alt="Agua Mala Cerveza">
         <figcaption>
-          <h2>Agua Mala</h2>
+          <h2>Agua</h2>
+          <p>Cerveceria Agua Mala
+          <br>
+          <a href="http://aguamala.com.mx/">Ver más</a>
+          </p>
+
         </figcaption>
       </figure>
-      </a>
+    
     </div>
     <div class="col-md-4">
-      <a href="https://es-la.facebook.com/cerveceriacalavera">
       <figure>
         <img src="img/galeria/calavera-pale-ale.jpg" alt="Calavera Cerveza">
         <figcaption>
           <h2>Calavera</h2>
+          <p>Cerverceria Calavera <br />
+                <a href="https://es-la.facebook.com/cerveceriacalavera">Ver más</a>
+            </p>
         </figcaption>
       </figure>
-      </a>
+      
     </div>
     <div class="col-md-4">
-      <a href="http://www.cucapa.com/esp/pages/cucapa.php">
+     
       <figure>
         <img src="img/galeria/cucapa.jpg"  alt="Cucapa Cerveza">
         <figcaption>
           <h2>Cucapa</h2>
+          <p>Cerveceria Cucapa <br/>
+           <a href="http://www.cucapa.com/esp/pages/cucapa.php"> Ver más</a></p>
         </figcaption>
       </figure>
-      </a>
     </div>
     <div class="col-md-4">
-      <a href="http://www.lachingoneria.com.mx/">
       <figure>
         <img src="img/galeria/la_chingoneria_00.jpg" alt="Chingoneria Cerveza">
         <figcaption>
-          <h2>La chingoneria</h2>
+          <h2>Chingon</h2>
+          <p>Cerverceria La Chingoneria  <br />
+            <a href="http://www.lachingoneria.com.mx/">Ver más</a>
+
+          </p>
         </figcaption>
       </figure>
-      </a>
+      
     </div>
 
     <div class="col-md-4">
-      <a href="http://www.cervezaramuri.com/">
+      
       <figure>
         <img src="img/galeria/lagrimas.jpg"  alt="Ramuri Cerveza">
         <figcaption>
           <h2>Ramuri</h2>
+          <p>Cerveceria Ramuri <br/>
+            <a href="http://www.cervezaramuri.com/">Ver más </a></p>
         </figcaption>
       </figure>
-      </a>
+     
     </div>
     <div class="col-md-4">
-      <a href="http://www.malasantacerveza.com/">
       <figure>
         <img src="img/galeria/malasanta.jpg"  alt="Mala Santa Cerveza">
         <figcaption>
           <h2>Mala Santa</h2>
+          <p>Cerveceria Mala Santa <br/>
+                <a href="http://www.malasantacerveza.com/">Ver más</a>
+          </p>
         </figcaption>
       </figure>
-      </a>
+      
     </div>
     <div class="col-md-4">
-      <a href="https://es-la.facebook.com/cpubc">
       <figure>
         <img src="img/galeria/Poe.jpg"  alt="Poe Cerveza">
         <figcaption>
           <h2>Publica Condesa</h2>
+          <p>Cerverceria Publica Condesa <br />
+            <a href="https://es-la.facebook.com/cpubc">Ver más</a>
+          </p>
         </figcaption>
       </figure>
-      </a>
+      
     </div>
 
   </div><!-- Fin galeria-wrapper -->
 </div> <!-- Fin row galeria -->
 
+<div class="row espacio internacionales-wrapper" id="internacionales">
+  <h2 class="text-center wowload fadeInUp  page-header ">Cervecerias Internacionales</h2>
+  <div class="clearfix">    
+    <div class="col-sm-6 col-sm-offset-3">
+      <div id="internacionales-list"  class="list-group">
+        <a href="#" class="list-group-item active">
+        </a>
+      </div>
+    </div>
+  </div>  
+
+
+</div>  
+
 <div class="row espacio contacto-wrapper" id="contacto">
 
-   <div class="espacio col-md-6 formaContacto ">
-          <h1 >Contacto</h1>
-          <form action="#"  >
-          <div class="form-group ">
-                <input type="text" nombre="nombre" class="form-control" id="nombre" placeholder="Nombre" data-rule="maxlen:4" data-msg="Minimo 4 caracteres" />
-                <div class="validation"></div>
-          </div>
-          <div class="form-group">
-                <input type="email" class="form-control" name="correo" id="correo" placeholder="Correo Electrónico" data-rule="email" data-msg="Por favor, introduce un correo valido" />
-                <div class="validation"></div>
-          </div>
-          <div class="form-group">
-                <input type="text" class="form-control" name="asunto" id="asunto" placeholder="Asunto" data-rule="maxlen:4" data-msg="Minimo 6 caracteres" />
-                <div class="validation"></div>
-          </div>
-
-          <div class="form-group">
-                <textarea class="form-control" name="mensaje" rows="5" data-rule="required" placeholder="Mensaje"></textarea>
-                <div class="validation"></div>
-          </div> 
-           <button type="submit" class="btn btn-success pull-left">Enviar</button>
-          </form>     
-    </div>
-    <div class="espacio col-md-6">
+  
+    <div class="text-center col-md-12">
       <div class="col-md-12">
-        <div class="contacto-mapa">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3765.068561016642!2d-99.186577!3d19.322831!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x9989fa5b4f526717!2sUniversidad+Nacional+Aut%C3%B3noma+de+M%C3%A9xico%2C+Ciudad+Universitaria!5e0!3m2!1ses!2smx!4v1421247456969" > </iframe>
+        <div class="contacto-mapa embed-responsive embed-responsive embed-responsive-4by3">
+          <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3765.068561016642!2d-99.186577!3d19.322831!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x9989fa5b4f526717!2sUniversidad+Nacional+Aut%C3%B3noma+de+M%C3%A9xico%2C+Ciudad+Universitaria!5e0!3m2!1ses!2smx!4v1421247456969" > </iframe>
         </div>
-        <div >
+        <div class="text-center">
           <h2>Información de Contacto</h2>
-          <address>
-           <p>Correo Electrónico: <a href="mail-to:proyectoFinal@proteco.com">  proyectoFinal@proteco.com</a></p>
-           <p>Telefono:  <a href="tel:0180056581111">01-800-5658-1111 </a></p>
+          <address >
+           <p >Correo Electrónico: <a href="mail-to:proyectoFinal@proteco.com">  proyectoFinal@proteco.com</a></p>
+           <p >Telefono:  <a href="tel:0180056581111">01-800-5658-1111 </a></p>
            <p> Av Universidad 3000, Ciudad Universitaria, Coyoacán</p>
            <p> CP. 04510 Ciudad de México, Distrito Federal</p>
 
          </address>
+         <button class="btn btn-success" type="button" onclick="mostrarForma();" > Envianos tu Informacion </button>
+         
+         
+
        </div>
      </div>
    </div>
-   <div class="col-md-offset-1 col-md-10 ">
+   <div class="espacio col-md-offset-1 col-md-10 ">
     <h2>Tienes curiosidad? Puedes iniciar con el siguiente curso para elaborar tu propia cerveza.</h2>
      <embed src="./objetos/curso.pdf" 
     type="application/pdf" class="objeto-pdf"
@@ -268,6 +292,33 @@
     <a href="./objetos/curso.pdf" class="enlacePdf" > Descargar </a>
  
    </div>
+    <div id="formaOculta">  
+            <h1 >Contacto</h1>
+            <form action="#"  >
+            <div class="form-group ">
+                <input type="text" nombre="nombre" class="form-control" id="nombre" placeholder="Nombre" data-rule="maxlen:4" data-msg="Minimo 4 caracteres" />
+                <div class="validation"></div>
+            </div>
+            <div class="form-group">
+                <input type="email" class="form-control" name="correo" id="correo" placeholder="Correo Electrónico" data-rule="email" data-msg="Por favor, introduce un correo valido" />
+                <div class="validation"></div>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" name="asunto" id="asunto" placeholder="Asunto" data-rule="maxlen:4" data-msg="Minimo 6 caracteres" />
+                <div class="validation"></div>
+            </div>
+
+            <div class="form-group">
+                <textarea class="form-control" name="mensaje" rows="5" data-rule="required" placeholder="Mensaje"></textarea>
+                <div class="validation"></div>
+            </div> 
+             <div class="form-group text-center">
+              <button type="submit" onclick="enviarInfo();" class="btn btn-success">Enviar</button>
+              <button type="submit" onclick="cancelar();" class="btn btn-warning ">Cancelar</button>
+              </div>
+             
+            </form>     
+          </div>   
 </div> <!-- Fin row contacto -->
 
 <div class="row">
@@ -283,14 +334,13 @@
 </div>
 
 
-
-
-
+         
 
 
 
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="js/wow.min.js"></script>
 <script src="js/principal.js"></script>
 
 </body>

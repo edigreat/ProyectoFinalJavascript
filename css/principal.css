@@ -44,6 +44,10 @@ h4{
 
 .espacio{padding: 6em 0;}
 
+.mensajes{
+  position: fixed;
+  
+}
 
 /** Lista de  navegacion **/
 
@@ -75,6 +79,8 @@ color: #777;
 
 .lista-navegacion li a:hover {
   color:#fff;
+  -webkit-animation-name: flash;
+          animation-name: flash;
 }
 
 .nav-wrapper form{
@@ -206,45 +212,160 @@ video{
 
 /*Seccion Galeria*/
 
-.galeria-wrapper{
-  padding-top:1em;
+
+
+
+
+.galeria-wrapper figcaption a{border:1px solid #fff;margin-top: 1em;display: inline-block;color: #fff;padding: 0 2em;}
+.galeria-wrapper figcaption a:hover{text-decoration: none;padding: 0 3em;}
+.galeria-wrapper {
+  position: relative;
+  margin: 0 auto;
+  list-style: none;
+  text-align: center;
 }
 
-.galeria-wrapper  a{
-    color: #333;
-  }
+/* Common style */
+.galeria-wrapper figure {
+  position: relative;
+  float: left;
+  overflow: hidden;
+  margin: 0;  /*change here for spacing*/ 
+  text-align: center;
+  cursor: pointer;
+}
 
-.galeria-wrapper  a:hover{
-  text-decoration: none;
-}  
+.galeria-wrapper figure img {
+  position: relative;
+  display: block;
+  max-width: 102%;
+  opacity: 1;
+}
+
+.galeria-wrapper figure figcaption {
+  padding: 2em;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.1em;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.galeria-wrapper figure figcaption::before,
+.galeria-wrapper figure figcaption::after {
+  pointer-events: none;
+}
+
+.galeria-wrapper figure figcaption,
+.galeria-wrapper figure figcaption > a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.galeria-wrapper figure figcaption > a {
+  z-index: 1000;
+  text-indent: 200%;
+  white-space: nowrap;
+  font-size: 0;
+  opacity: 0;
+}
+
+.galeria-wrapper figure h2 {
+  word-spacing: -0.15em;
+  font-weight: 500;
+}
+
+.galeria-wrapper figure h2,
+.galeria-wrapper figure p {
+  margin: 0;
+}
+
+.galeria-wrapper figure p {
+  letter-spacing: 1px;
+  font-size: 68.5%;
+}
 
 .galeria-wrapper img{
   width:300px;
   height:300px;
-  background:rgba(0,0,0,0.6); 
+  background:rgba(0,0,0,0.8); 
   -webkit-box-shadow: 0 10px 6px -6px #777;
      -moz-box-shadow: 0 10px 6px -6px #777;
           box-shadow: 0 10px 6px -6px #777;
-  opacity: 0.3;
+  opacity: 0.1;
 
 
 }
 
-.galeria-wrapper img:hover{
+figure.efecto-imagen {
+  background: -webkit-linear-gradient(45deg, #22682a 0%, #9b4a1b 40%, #3a342a 100%);
+  background: linear-gradient(45deg, #22682a 0%,#9b4a1b 40%,#3a342a 100%);
+}
+
+figure.efecto-imagen img {
+  opacity: 0.9;
+  -webkit-transition: opacity 0.35s;
+  transition: opacity 0.35s;
+}
+
+figure.efecto-imagen figcaption {
+  padding: 15%;
+/*  background-color: rgba(58,52,42,0.7);
+  -webkit-transition: background-color 0.35s;
+  transition: background-color 0.35s;*/
+}
+
+figure.efecto-imagen figcaption::before {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  bottom: 30px;
+  left: 30px;
+  border: 1px solid #fff;
+  content: '';
+}
+
+figure.efecto-imagen h2 {
+  margin: 0;
+  line-height: 1em;
+  -webkit-transition: -webkit-transform 0.35s;
+  transition: transform 0.35s;
+  -webkit-transform: translate3d(0,100%,0);
+  transform: translate3d(0,100%,0);
+}
+
+figure.efecto-imagen figcaption::before,
+figure.efecto-imagen p {
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
+
+figure.efecto-imagen:hover h2 {
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+
+figure.efecto-imagen:hover figcaption::before,
+figure.efecto-imagen:hover p {
   opacity: 1;
-  padding: 5px;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
 
+figure.efecto-imagen:hover figcaption {
+  background-color: rgba(0,0,0,0.8);
+}
 
+figure.efecto-imagen:hover img {
+  opacity: 0.4;
 }
 
 
-.galeria-wrapper h2{
-    padding: 15px;
-    color: #616161;
-    font-size: 25px;
-    font-weight: bold;
-    margin: 0;
-}
 
 /** Seccion de contacto **/
 
@@ -318,6 +439,13 @@ width: 50px;
     width:800px;
     height:300px; 
 }
+
+
+
+
+
+
+
 
 /** Media queries **/
 
@@ -420,16 +548,24 @@ width: 50px;
    
   }
 
-  .formaContacto{
-    padding: 15px;
-  }
+
   .objeto-pdf{
     display: none;
   }
   .enlacePdf{
   display: inline-block;
 }
+
+.galeria-wrapper figure h2 {
+  display: none;
 }
+.galeria-wrapper figure p {
+  padding-top: 15px;
+}
+
+
+
+
 
 
 
