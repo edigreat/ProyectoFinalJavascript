@@ -286,17 +286,16 @@
     <h2>Tienes curiosidad? Puedes iniciar con el siguiente curso para elaborar tu propia cerveza.</h2>
      <embed src="./objetos/curso.pdf" 
     type="application/pdf" class="objeto-pdf"
-    >
-    </embed>
-
+    />
+   
     <a href="./objetos/curso.pdf" class="enlacePdf" > Descargar </a>
  
    </div>
     <div id="formaOculta">  
             <h1 >Contacto</h1>
-            <form action="#"  >
+            <form method="post" action="#"  >
             <div class="form-group ">
-                <input type="text" nombre="nombre" class="form-control" id="nombre" placeholder="Nombre" data-rule="maxlen:4" data-msg="Minimo 4 caracteres" />
+                <input type="text" name="nombre" class="form-control" id="nombre" placeholder="Nombre" data-rule="maxlen:4" data-msg="Minimo 4 caracteres" />
                 <div class="validation"></div>
             </div>
             <div class="form-group">
@@ -313,8 +312,8 @@
                 <div class="validation"></div>
             </div> 
              <div class="form-group text-center">
-              <button type="submit" onclick="enviarInfo();" class="btn btn-success">Enviar</button>
-              <button type="submit" onclick="cancelar();" class="btn btn-warning ">Cancelar</button>
+              <button type="button" id="enviarInfo" class="btn btn-success">Enviar</button>
+              <button type="button" id="cancelarInfo" class="btn btn-warning ">Cancelar</button>
               </div>
              
             </form>     
@@ -331,6 +330,7 @@
     </ul>
   </div><!-- wrap -->
 </footer>
+</div>
 </div>
 
 

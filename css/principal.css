@@ -46,7 +46,8 @@ h4{
 
 .mensajes{
   position: fixed;
-  
+  z-index: 50;
+
 }
 
 /** Lista de  navegacion **/

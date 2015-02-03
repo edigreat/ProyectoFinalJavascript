@@ -28,6 +28,15 @@ function inicializarEfectos(){
   $("#formaOculta").css("display","none");
   $("#formaOculta.form-group").css("padding","20px");
   $("#mensajeRegistro").css("display","none");
+  $("#enviarInfo").click(function(event){
+        event.preventDefault();
+        $("#formaOculta").hide('slow');
+        $("#mensajeRegistro").show(1000).hide(5000);
+      });
+  $("#cancelarInfo").click(function(event){
+        event.preventDefault();
+        $("#formaOculta").hide('slow');
+      });
    
  
 }
@@ -55,15 +64,4 @@ function mostrarForma(){
   
 }
 
-function enviarInfo(){
-      $("#formaOculta").hide('slow');
-      $("#mensajeRegistro").show(1000).hide(5000);
-
-  
-}
-
-function cancelar(){
-      $("#formaOculta").hide('slow');
-  
-}
 
